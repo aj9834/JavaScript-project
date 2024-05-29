@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Customization Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+       
+document.addEventListener("DOMContentLoaded", function() {
+    const helpIcons = document.querySelectorAll(".help-icon");
+        
+    helpIcons.forEach((icon) => {
+        icon.addEventListener("click", function() {
+            const title = this.getAttribute('title');
+            if (title) {
+                alert(title);
+            }
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Customize Your Jewelry</h1>
+        <form id="jewelryForm">
+          
+            <div class="form-step active" data-step="1">
+                <label for="occasion">What is the occasion for this jewelry?</label>
+                <span class="help-icon" title="This helps us tailor our recommendations to match the significance and style suitable for the event.">
+                  ?
+                </span>
+
+                <select id="occasion" name="occasion" required>
+                    <option value="">Select Occasion</option>
+                    <option value="Engagement">Engagement</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Daily-wear">Daily-wear</option>
+                    <option value="Custom">Custom</option>
+                </select>
+                <input type="text" id="customOccasion" name="customOccasion" placeholder="Please specify" style="display: none;">
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <label>Is this a gift or a personal purchase?</label>
+                <span class="help-icon" title="Understanding if the jewelry is for yourself or someone else helps us refine our suggestions based on typical gift preferences.">?</span>
+                <div class="radio-group">
+                    <input type="radio" id="gift" name="purchaseType" value="Gift" required>
+                    <label for="gift">Gift</label>
+                    <input type="radio" id="personal" name="purchaseType" value="Personal Purchase">
+                    <label for="personal">Personal Purchase</label>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <label>Please select the gender.</label>
+                <span class="help-icon" title="This allows us to recommend designs and styles that align with the typical preferences of the chosen gender.">?</span>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <label>What is the age group of the wearer?</label>
+                <span class="help-icon" title="Age can significantly influence jewelry style preferences, so this helps us make more suitable recommendations.">?</span>
+                <div class="radio-group">
+                    <input type="radio" id="under18" name="ageGroup" value="<18" required>
+                    <label for="under18">&lt;18</label>
+                    <input type="radio" id="age18to25" name="ageGroup" value="18-25">
+                    <label for="age18to25">18-25</label>
+                    <input type="radio" id="age26to35" name="ageGroup" value="26-35">
+                    <label for="age26to35">26-35</label>
+                    <input type="radio" id="age36to50" name="ageGroup" value="36-50">
+                    <label for="age36to50">36-50</label>
+                    <input type="radio" id="age51plus" name="ageGroup" value="51+">
+                    <label for="age51plus">51+</label>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="5">
+                <label for="religion">Do you have any religious considerations for this jewelry? (Optional)</label>
+                <span class="help-icon" title="Some religious beliefs might influence jewelry design choices, like specific symbols or restrictions.">?</span>
+                <select id="religion" name="religion">
+                    <option value="">Select Religion</option>
+                    <option value="Christianity">Christianity</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Hinduism">Hinduism</option>
+                    <option value="Buddhism">Buddhism</option>
+                    <option value="Judaism">Judaism</option>
+                    <option value="None">None</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="6">
+                <label>What type of jewelry are you interested in?</label>
+                <span class="help-icon" title="This helps us narrow down the product category to provide more relevant recommendations.">?</span>
+                <div class="radio-group">
+                    <input type="radio" id="rings" name="jewelryType" value="Rings" required>
+                    <label for="rings">Rings</label>
+                    <input type="radio" id="necklaces" name="jewelryType" value="Necklaces">
+                    <label for="necklaces">Necklaces</label>
+                    <input type="radio" id="pendants" name="jewelryType" value="Pendants">
+                    <label for="pendants">Pendants</label>
+                    <input type="radio" id="bracelets" name="jewelryType" value="Bracelets">
+                    <label for="bracelets">Bracelets</label>
+                    <input type="radio" id="earrings" name="jewelryType" value="Earrings">
+                    <label for="earrings">Earrings</label>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="7">
+                <label>What is your budget for this jewelry?</label>
+                <span class="help-icon" title="Knowing your budget helps us suggest options that fit within your financial constraints.">?</span>
+                <div class="radio-group">
+                    <input type="radio" id="budget50" name="budget" value="<50" required>
+                    <label for="budget50">&lt;$50</label>
+                    <input type="radio" id="budget50to100" name="budget" value="50-100">
+                    <label for="budget50to100">$50-$100</label>
+                    <input type="radio" id="budget100to200" name="budget" value="100-200">
+                    <label for="budget100to200">$100-$200</label>
+                    <input type="radio" id="budget200plus" name="budget" value="200+">
+                    <label for="budget200plus">$200+</label>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" data-step="8">
+                <label>Would you like to match your jewelry with an outfit?</label>
+                <span class="help-icon" title="Uploading an image of your outfit can help us recommend jewelry that complements your attire perfectly.">?</span>
+                <div class="radio-group">
+                    <input type="radio" id="outfitYes" name="outfitMatch" value="Yes" required>
+                    <label for="outfitYes">Yes</label>
+                    <input type="radio" id="outfitNo" name="outfitMatch" value="No">
+                    <label for="outfitNo">No</label>
+                </div>
+                <div id="uploadOutfit" style="display: none;">
+                    <label for="outfitImage">Upload an image of your outfit</label>
+                    <input type="file" id="outfitImage" name="outfitImage" accept="image/*">
+                    <img id="outfitPreview" src="#" alt="Outfit Preview" style="display: none;">
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
