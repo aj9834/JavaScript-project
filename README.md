@@ -22,3 +22,10 @@ The form consists of multiple steps, each gathering specific information about t
 
   ### images 
 
+  ![Screenshot (2826)](https://github.com/aj9834/JavaScript-project/assets/121596903/8d9ccbc4-2ce3-4b15-b673-56c71defb066)
+  
+![Screenshot (2827)](https://github.com/aj9834/JavaScript-project/assets/121596903/476ac315-a277-47cc-909a-49ba4b13f6e6)
+
+![Screenshot (2828)](https://github.com/aj9834/JavaScript-project/assets/121596903/c0d83bee-12b2-44e5-94da-ac6a5ae4f187)
+
+
